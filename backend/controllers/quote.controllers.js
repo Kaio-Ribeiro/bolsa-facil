@@ -1,5 +1,5 @@
 // Função para obter a lista de cotações de todas as ações
-export const listQuotes = async (req, res) => {
+const listQuotes = async (req, res) => {
   try {
     // Obtém o token do arquivo.env
     const apiToken = process.env.BRAPI_API_TOKEN;
@@ -51,7 +51,7 @@ export const listQuotes = async (req, res) => {
 };
 
 // Função para buscar os dados da cotação de um ativo financeiro
-export const getQuote = async (req, res) => {
+const getQuote = async (req, res) => {
   try {
     // Obtém o token do arquivo.env
     const apiToken = process.env.BRAPI_API_TOKEN;
@@ -100,3 +100,5 @@ export const getQuote = async (req, res) => {
     });
   }
 };
+
+module.exports = { listQuotes, getQuote };
